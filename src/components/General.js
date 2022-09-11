@@ -4,6 +4,7 @@ import React, { Component } from "react";
 class General extends Component {
    constructor(props) {
       super(props)
+      this.onGeneralInfoChange = this.props.onGeneralInfoChange
    }
 
    render() {
@@ -13,18 +14,27 @@ class General extends Component {
                <label htmlFor="firstName">First name: </label>
                <input
                   type="text"
-                  id="firstName" />
+                  id="firstName"
+                  name="firstName"
+                  onChange={this.onGeneralInfoChange}
+               />
 
-               <label htmlFor="firstName">Last name: </label>
+               <label htmlFor="lastName">Last name: </label>
                <input
                   type="text"
-                  id="lastName" />
+                  id="lastName"
+                  name="lastName"
+                  onChange={this.onGeneralInfoChange}
+               />
 
-               <label htmlFor="phoneNumber">Phone: </label>
+               <label htmlFor="phone">Phone: </label>
                <input
                   type="phone"
-                  id="phoneNumber"
-                  inputMode="tel" />
+                  id="phone"
+                  name="phone"
+                  inputMode="tel"
+                  onChange={this.onGeneralInfoChange}
+               />
             </form>
          </div>
       )

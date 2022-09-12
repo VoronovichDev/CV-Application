@@ -30,14 +30,11 @@ class App extends Component {
             dismissalDate: '',
          },
       }
-
       this.onGeneralInfoChange = this.onGeneralInfoChange.bind(this)
-
    }
 
    onGeneralInfoChange = (e) => {
       const target = e.target
-      const parent = target.parentNode
       const value = target.value
       const name = target.name
 
@@ -45,8 +42,8 @@ class App extends Component {
          this.setState({
             generalInfo: {
                [name]: value,
-               lastName: parent.lastName.value,
-               phone: parent.phone.value
+               lastName: this.state.generalInfo.lastName,
+               phone: this.state.generalInfo.phone,
             }
          })
       }
@@ -54,8 +51,8 @@ class App extends Component {
          this.setState({
             generalInfo: {
                [name]: value,
-               firstName: parent.firstName.value,
-               phone: parent.phone.value
+               firstName: this.state.generalInfo.firstName,
+               phone: this.state.generalInfo.phone,
             }
          })
       }
@@ -63,8 +60,8 @@ class App extends Component {
          this.setState({
             generalInfo: {
                [name]: value,
-               firstName: parent.firstName.value,
-               lastName: parent.lastName.value
+               firstName: this.state.generalInfo.firstName,
+               lastName: this.state.generalInfo.lastName,
             }
          })
       }

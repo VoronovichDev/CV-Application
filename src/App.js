@@ -32,6 +32,7 @@ class App extends Component {
       }
       this.onGeneralInfoChange = this.onGeneralInfoChange.bind(this)
       this.onEducationChange = this.onEducationChange.bind(this)
+      this.onExperienceChange = this.onExperienceChange.bind(this)
    }
 
    onGeneralInfoChange = (e) => {
@@ -42,7 +43,7 @@ class App extends Component {
       if (name === 'firstName') {
          this.setState({
             generalInfo: {
-               [name]: value,
+               firstName: value,
                lastName: this.state.generalInfo.lastName,
                phone: this.state.generalInfo.phone,
             }
@@ -51,7 +52,7 @@ class App extends Component {
       if (name === 'lastName') {
          this.setState({
             generalInfo: {
-               [name]: value,
+               lastName: value,
                firstName: this.state.generalInfo.firstName,
                phone: this.state.generalInfo.phone,
             }
@@ -60,7 +61,7 @@ class App extends Component {
       if (name === 'phone') {
          this.setState({
             generalInfo: {
-               [name]: value,
+               phone: value,
                lastName: this.state.generalInfo.lastName,
                firstName: this.state.generalInfo.firstName,
             }
@@ -149,6 +150,67 @@ class App extends Component {
 
    }
 
+   onExperienceChange = (e) => {
+      const target = e.target
+      const value = target.value
+      const name = target.name
+
+      if (name === 'companyName') {
+         this.setState({
+            experience: {
+               company: value,
+               position: this.state.experience.position,
+               tasks: this.state.experience.tasks,
+               emplymentDate: this.state.experience.emplymentDate,
+               dismissalDate: this.state.experience.dismissalDate,
+            }
+         })
+      }
+      if (name === 'position') {
+         this.setState({
+            experience: {
+               company: this.state.experience.company,
+               position: value,
+               tasks: this.state.experience.tasks,
+               emplymentDate: this.state.experience.emplymentDate,
+               dismissalDate: this.state.experience.dismissalDate,
+            }
+         })
+      }
+      if (name === 'mainTasks') {
+         this.setState({
+            experience: {
+               company: this.state.experience.company,
+               position: this.state.experience.position,
+               tasks: value,
+               emplymentDate: this.state.experience.emplymentDate,
+               dismissalDate: this.state.experience.dismissalDate,
+            }
+         })
+      }
+      if (name === 'emplymentDate') {
+         this.setState({
+            experience: {
+               company: this.state.experience.company,
+               position: this.state.experience.position,
+               tasks: this.state.experience.tasks,
+               emplymentDate: value,
+               dismissalDate: this.state.experience.dismissalDate,
+            }
+         })
+      }
+      if (name === 'dismissalDate') {
+         this.setState({
+            experience: {
+               company: this.state.experience.company,
+               position: this.state.experience.position,
+               tasks: this.state.experience.tasks,
+               emplymentDate: this.state.experience.emplymentDate,
+               dismissalDate: value,
+            }
+         })
+      }
+   }
 
    render() {
       return (
@@ -159,7 +221,9 @@ class App extends Component {
             <Education
                onEducationChange={this.onEducationChange}
             />
-            <Experience />
+            <Experience
+               onExperienceChange={this.onExperienceChange}
+            />
             <div className="buttons">
                <button id="submitCv">Submit</button>
                <button id='editCv'>Edit</button>

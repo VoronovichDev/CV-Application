@@ -29,11 +29,16 @@ class App extends Component {
             employmentDate: '',
             dismissalDate: '',
          },
+
+         isEditing: true,
       }
 
       this.onGeneralInfoChange = this.onGeneralInfoChange.bind(this)
       this.onEducationChange = this.onEducationChange.bind(this)
       this.onExperienceChange = this.onExperienceChange.bind(this)
+
+      this.toggleOnSubmitCv = this.toggleOnSubmitCv.bind(this)
+      this.toggleOnEditCv = this.toggleOnEditCv.bind(this)
    }
 
    onGeneralInfoChange = (e) => {
@@ -47,8 +52,6 @@ class App extends Component {
             [name]: value,
          }
       })
-
-      console.log(value)
    }
 
    onEducationChange = (e) => {
@@ -77,30 +80,53 @@ class App extends Component {
       })
    }
 
+
+   toggleOnSubmitCv = (e) => {
+      this.setState({
+         isEditing: false,
+      })
+   }
+
+   toggleOnEditCv = (e) => {
+      this.setState({
+         isEditing: true,
+      })
+   }
+
+
    render() {
-      return (
-         <div>
-            <General
-               onGeneralInfoChange={this.onGeneralInfoChange}
-               generalInfo={this.state.generalInfo}
-            />
-            <Education
-               onEducationChange={this.onEducationChange}
-               education={this.state.education}
 
-            />
-            <Experience
-               onExperienceChange={this.onExperienceChange}
-               experience={this.state.experience}
-            />
-            <Cv
-               generalInfo={this.state.generalInfo}
-               education={this.state.education}
-               experience={this.state.experience}
-            />
+      if (this.state.isEditing) {
+         return (
+            <div>
+               <General
+                  onGeneralInfoChange={this.onGeneralInfoChange}
+                  generalInfo={this.state.generalInfo}
+               />
+               <Education
+                  onEducationChange={this.onEducationChange}
+                  education={this.state.education}
+               />
+               <Experience
+                  onExperienceChange={this.onExperienceChange}
+                  experience={this.state.experience}
+               />
+               <Cv
+                  stateApp={this.state}
+                  toggleOnSubmitCv={this.toggleOnSubmitCv}
+                  toggleOnEditCv={this.toggleOnEditCv}
+               />
 
-         </div>
-      )
+            </div>
+         )
+      }
+      return <Cv
+         stateApp={this.state}
+         toggleOnSubmitCv={this.toggleOnSubmitCv}
+         toggleOnEditCv={this.toggleOnEditCv}
+      />
+
+
    }
 }
 

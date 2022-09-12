@@ -11,11 +11,11 @@ class Experience extends Component {
          <div>
             <form name="ExperienceForm">
 
-               <label htmlFor="companyName">Company name: </label>
+               <label htmlFor="company">Company name: </label>
                <input
                   type="text"
-                  id="companyName"
-                  name="companyName"
+                  id="company"
+                  name="company"
                   onChange={this.onExperienceChange}
                />
 
@@ -27,11 +27,11 @@ class Experience extends Component {
                   onChange={this.onExperienceChange}
                />
 
-               <label htmlFor="mainTasks">Main tasks: </label>
+               <label htmlFor="tasks">Main tasks: </label>
                <input
                   type="text"
-                  id="mainTasks"
-                  name="mainTasks"
+                  id="tasks"
+                  name="tasks"
                   placeholder="list tasks separated by commas(',')"
                   onChange={this.onExperienceChange}
                />

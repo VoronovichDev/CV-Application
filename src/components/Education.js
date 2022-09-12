@@ -19,18 +19,18 @@ class Education extends Component {
                      name="school"
                      onChange={this.onEducationChange} />
 
-                  <label htmlFor="receiptDateSchool">Receipt date: </label>
+                  <label htmlFor="schoolReceipt">Receipt date: </label>
                   <input
                      type="date"
-                     id="receiptDateSchool"
-                     name="receiptDateSchool"
+                     id="schoolReceipt"
+                     name="schoolReceipt"
                      onChange={this.onEducationChange} />
 
-                  <label htmlFor="graduationDateSchool">Graduation date: </label>
+                  <label htmlFor="schoolGraduation">Graduation date: </label>
                   <input
                      type="date"
-                     id="graduationDateSchool"
-                     name="graduationDateSchool"
+                     id="schoolGraduation"
+                     name="schoolGraduation"
                      onChange={this.onEducationChange} />
                </div>
 
@@ -43,19 +43,19 @@ class Education extends Component {
                      onChange={this.onEducationChange}
                   />
 
-                  <label htmlFor="receiptDateInstitution">Receipt date: </label>
+                  <label htmlFor="institutionRecepit">Receipt date: </label>
                   <input
                      type="date"
-                     id="receiptDateInstitution"
-                     name="receiptDateInstitution"
+                     id="institutionRecepit"
+                     name="institutionRecepit"
                      onChange={this.onEducationChange}
                   />
 
-                  <label htmlFor="graduationDateInstitution">Graduation date: </label>
+                  <label htmlFor="institutionGraduation">Graduation date: </label>
                   <input
                      type="date"
-                     id="graduationDateInstitution"
-                     name="graduationDateInstitution"
+                     id="institutionGraduation"
+                     name="institutionGraduation"
                      onChange={this.onEducationChange}
                   />
                </div>

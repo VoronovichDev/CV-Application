@@ -17,6 +17,7 @@ class Experience extends Component {
                   id="company"
                   name="company"
                   onChange={this.onExperienceChange}
+                  value={this.props.experience.company}
                />
 
                <label htmlFor="position">Position: </label>
@@ -25,6 +26,8 @@ class Experience extends Component {
                   id="position"
                   name="position"
                   onChange={this.onExperienceChange}
+                  value={this.props.experience.position}
+
                />
 
                <label htmlFor="tasks">Main tasks: </label>
@@ -34,15 +37,17 @@ class Experience extends Component {
                   name="tasks"
                   placeholder="list tasks separated by commas(',')"
                   onChange={this.onExperienceChange}
+                  value={this.props.experience.tasks}
                />
 
 
-               <label htmlFor="emplymentDate">Employment date: </label>
+               <label htmlFor="employmentDate">Employment date: </label>
                <input
                   type="date"
-                  id="emplymentDate"
-                  name="emplymentDate"
+                  id="employmentDate"
+                  name="employmentDate"
                   onChange={this.onExperienceChange}
+                  value={this.props.experience.emplymentDate}
                />
 
                <label htmlFor="dismissalDate">Dismissal date: </label>
@@ -51,6 +56,8 @@ class Experience extends Component {
                   id="dismissalDate"
                   name="dismissalDate"
                   onChange={this.onExperienceChange}
+                  value={this.props.experience.dismissalDate}
+
                />
 
             </form>

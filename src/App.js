@@ -26,7 +26,7 @@ class App extends Component {
             company: '',
             position: '',
             tasks: '',
-            emplymentDate: '',
+            employmentDate: '',
             dismissalDate: '',
          },
       }
@@ -47,6 +47,8 @@ class App extends Component {
             [name]: value,
          }
       })
+
+      console.log(value)
    }
 
    onEducationChange = (e) => {
@@ -60,7 +62,6 @@ class App extends Component {
             [name]: value,
          }
       })
-
    }
 
    onExperienceChange = (e) => {
@@ -81,17 +82,17 @@ class App extends Component {
          <div>
             <General
                onGeneralInfoChange={this.onGeneralInfoChange}
+               generalInfo={this.state.generalInfo}
             />
             <Education
                onEducationChange={this.onEducationChange}
+               education={this.state.education}
+
             />
             <Experience
                onExperienceChange={this.onExperienceChange}
+               experience={this.state.experience}
             />
-            <div className="buttons">
-               <button id="submitCv">Submit</button>
-               <button id='editCv'>Edit</button>
-            </div>
             <Cv
                generalInfo={this.state.generalInfo}
                education={this.state.education}
@@ -100,7 +101,6 @@ class App extends Component {
 
          </div>
       )
-
    }
 }
 

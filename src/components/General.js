@@ -17,6 +17,7 @@ class General extends Component {
                   id="firstName"
                   name="firstName"
                   onChange={this.onGeneralInfoChange}
+                  value={this.props.generalInfo.firstName}
                />
 
                <label htmlFor="lastName">Last name: </label>
@@ -25,6 +26,7 @@ class General extends Component {
                   id="lastName"
                   name="lastName"
                   onChange={this.onGeneralInfoChange}
+                  value={this.props.generalInfo.lastName}
                />
 
                <label htmlFor="phone">Phone: </label>
@@ -34,6 +36,7 @@ class General extends Component {
                   name="phone"
                   inputMode="tel"
                   onChange={this.onGeneralInfoChange}
+                  value={this.props.generalInfo.phone}
                />
             </form>
          </div>

@@ -17,21 +17,27 @@ class Education extends Component {
                      type="text"
                      id="school"
                      name="school"
-                     onChange={this.onEducationChange} />
+                     onChange={this.onEducationChange}
+                     value={this.props.education.school}
+                  />
 
                   <label htmlFor="schoolReceipt">Receipt date: </label>
                   <input
                      type="date"
                      id="schoolReceipt"
                      name="schoolReceipt"
-                     onChange={this.onEducationChange} />
+                     onChange={this.onEducationChange}
+                     value={this.props.education.schoolReceipt}
+                  />
 
                   <label htmlFor="schoolGraduation">Graduation date: </label>
                   <input
                      type="date"
                      id="schoolGraduation"
                      name="schoolGraduation"
-                     onChange={this.onEducationChange} />
+                     onChange={this.onEducationChange}
+                     value={this.props.education.schoolGraduation}
+                  />
                </div>
 
                <div className="institution">
@@ -41,6 +47,8 @@ class Education extends Component {
                      id="institution"
                      name="institution"
                      onChange={this.onEducationChange}
+                     value={this.props.education.institution}
+
                   />
 
                   <label htmlFor="institutionRecepit">Receipt date: </label>
@@ -49,6 +57,7 @@ class Education extends Component {
                      id="institutionRecepit"
                      name="institutionRecepit"
                      onChange={this.onEducationChange}
+                     value={this.props.education.institutionRecepit}
                   />
 
                   <label htmlFor="institutionGraduation">Graduation date: </label>
@@ -57,6 +66,7 @@ class Education extends Component {
                      id="institutionGraduation"
                      name="institutionGraduation"
                      onChange={this.onEducationChange}
+                     value={this.props.education.institutionGraduation}
                   />
                </div>
 

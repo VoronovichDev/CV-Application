@@ -1,0 +1,21 @@
+.experience {
+   background-color: rgb(157, 201, 249);
+   width: 100%;
+   padding: 30px;
+}
+.experience form {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 5px;
+   flex-wrap: wrap;
+}
+.experience form input {
+   width: 70%;
+}
+
+@media (max-width: 480px) {
+   .experience form input {
+      width: 90%;
+   }
+}

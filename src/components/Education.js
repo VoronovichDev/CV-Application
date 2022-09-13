@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import s from './Education.module.css'
 
 class Education extends Component {
    constructor(props) {
@@ -8,10 +9,10 @@ class Education extends Component {
 
    render() {
       return (
-         <div>
+         <div className={s.education}>
             <form name="EducationForm">
 
-               <div className="school">
+               <div className={s.school}>
                   <label htmlFor="school">School name: </label>
                   <input
                      type="text"
@@ -40,7 +41,7 @@ class Education extends Component {
                   />
                </div>
 
-               <div className="institution">
+               <div className={s.institution}>
                   <label htmlFor="institution">Educational institution: </label>
                   <input
                      type="text"

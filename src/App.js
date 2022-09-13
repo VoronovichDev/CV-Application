@@ -4,6 +4,8 @@ import Education from "./components/Education";
 import Experience from "./components/Experience";
 import Cv from "./components/Cv";
 
+import s from './App.module.css'
+
 class App extends Component {
    constructor(props) {
       super(props)
@@ -98,7 +100,7 @@ class App extends Component {
 
       if (this.state.isEditing) {
          return (
-            <div>
+            <div className={s.container}>
                <General
                   onGeneralInfoChange={this.onGeneralInfoChange}
                   generalInfo={this.state.generalInfo}
@@ -116,15 +118,16 @@ class App extends Component {
                   toggleOnSubmitCv={this.toggleOnSubmitCv}
                   toggleOnEditCv={this.toggleOnEditCv}
                />
-
             </div>
          )
       }
-      return <Cv
-         stateApp={this.state}
-         toggleOnSubmitCv={this.toggleOnSubmitCv}
-         toggleOnEditCv={this.toggleOnEditCv}
-      />
+      return <div className={s.container}>
+         <Cv
+            stateApp={this.state}
+            toggleOnSubmitCv={this.toggleOnSubmitCv}
+            toggleOnEditCv={this.toggleOnEditCv}
+         />
+      </div>
 
 
    }

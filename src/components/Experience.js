@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import s from './Experience.module.css'
 
 class Experience extends Component {
    constructor(props) {
@@ -8,7 +9,7 @@ class Experience extends Component {
 
    render() {
       return (
-         <div>
+         <div className={s.experience}>
             <form name="ExperienceForm">
 
                <label htmlFor="company">Company name: </label>
@@ -35,7 +36,7 @@ class Experience extends Component {
                   type="text"
                   id="tasks"
                   name="tasks"
-                  placeholder="list tasks separated by commas(',')"
+                  placeholder="Please, list tasks separated by commas(',')"
                   onChange={this.onExperienceChange}
                   value={this.props.experience.tasks}
                />
@@ -47,7 +48,7 @@ class Experience extends Component {
                   id="employmentDate"
                   name="employmentDate"
                   onChange={this.onExperienceChange}
-                  value={this.props.experience.emplymentDate}
+                  value={this.props.experience.employmentDate}
                />
 
                <label htmlFor="dismissalDate">Dismissal date: </label>

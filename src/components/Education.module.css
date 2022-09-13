@@ -1,0 +1,30 @@
+.education {
+   background-color: rgb(188, 220, 253);
+   width: 100%;
+   padding: 30px;
+}
+.education form {
+   display: flex;
+   gap: 60px;
+   justify-content: center;
+}
+
+.school,
+.institution {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 15px;
+}
+
+.school input,
+.institution input {
+   width: 90%;
+}
+
+@media (max-width: 480px) {
+   .education form {
+      flex-wrap: wrap;
+   }
+}

@@ -45,7 +45,7 @@ class Cv extends Component {
                <p className={s.school}>School name: {this.state.education.school}</p>
                <p className={s.school_start}>Started studying: {this.state.education.schoolReceipt}</p>
                <p className={s.school_end}>Graduated: {this.state.education.schoolGraduation}</p>
-               <br />
+               <hr className={s.line} />
                <p className={s.institution}>Institution name: {this.state.education.institution}</p>
                <p className={s.institution_start}>Started studying: {this.state.education.institutionRecepit}</p>
                <p className={s.institution_end}>Graduated: {this.state.education.institutionGraduation}</p>

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import s from './General.module.css'
 
 class General extends Component {
    constructor(props) {
@@ -9,7 +9,7 @@ class General extends Component {
 
    render() {
       return (
-         <div>
+         <div className={s.general}>
             <form name="GeneralForm">
                <label htmlFor="firstName">First name: </label>
                <input

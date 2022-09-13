@@ -1,0 +1,21 @@
+.general {
+   background-color: rgb(215, 232, 250);
+   width: 100%;
+   padding: 30px;
+}
+.general form {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 5px;
+   flex-wrap: wrap;
+}
+.general form input {
+   width: 70%;
+}
+
+@media (max-width: 480px) {
+   .general form input {
+      width: 90%;
+   }
+}
